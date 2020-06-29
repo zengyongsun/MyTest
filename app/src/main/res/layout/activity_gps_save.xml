@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".gps.GpsSaveActivity">
+
+    <TextView
+        android:id="@+id/gpsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="获取GPS中"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/pointDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="请输入描述"
+        app:layout_constraintBottom_toBottomOf="@+id/pointBtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/pointBtn"
+        app:layout_constraintTop_toBottomOf="@+id/gpsText" />
+
+    <Button
+        android:id="@+id/pointBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="打点"
+        app:layout_constraintLeft_toRightOf="@+id/pointDesc"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gpsText" />
+
+    <Button
+        android:id="@+id/lineStartBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="路线记录"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/lineEndBtn"
+        app:layout_constraintTop_toBottomOf="@+id/pointBtn" />
+
+    <Button
+        android:id="@+id/lineEndBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="暂停路线"
+        app:layout_constraintLeft_toRightOf="@+id/lineStartBtn"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pointBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
